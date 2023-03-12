@@ -1,0 +1,123 @@
+--// https://t.me/arceusxscripts \\--
+
+--// Settings \\--
+local Amount = 999999999999
+
+--// Services \\--
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+--// Variables \\--
+local Player = Players.LocalPlayer
+local Upgrade = ReplicatedStorage:WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ProximityPrompts"):WaitForChild("RE"):WaitForChild("ConfirmUpgrade")
+local Map = Workspace:WaitForChild("PlayerMaps"):WaitForChild("Active"):WaitForChild(Player.Name .. "_map")
+
+--// Inf. Cash \\--
+local Building = Map:FindFirstChildWhichIsA("ProximityPrompt", true)
+if Building then
+    Upgrade:FireServer({
+        Parent = Building.Parent,
+        Name = Player.Name .. ";3;" .. Building:FindFirstAncestorOfClass("Model").Name .. ";" .. tostring(-Amount)
+    })
+end
+
+print("auto win loaded, made by Finny")
+
+local lp = game.Players.LocalPlayer.Character.HumanoidRootPart
+repeat wait(2) until workspace.GroupBuildStructures:FindFirstChild("BlockTower")
+
+print("starting")
+
+for i,v in pairs(workspace:GetChildren()) do
+    if v.Name:find("Block") then
+		v.TouchTrigger.CFrame = lp.CFrame
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BlockTower.Trigger, 0)
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BlockTower.Trigger, 1)
+		task.wait(.1)
+    end
+end
+
+if workspace:FindFirstChild('Block24') then
+	workspace:FindFirstChild('Block24').TouchTrigger.CFrame = lp.CFrame
+end
+
+wait(1)
+
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BlockTower.Trigger, 0)
+task.wait(.1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BlockTower.Trigger, 1)
+
+wait(1)
+repeat wait(2) until workspace.GroupBuildStructures:FindFirstChild("FoodCounter")
+
+for i,v in pairs(workspace:GetChildren()) do
+    if v.Name:find("Food") then
+		v.TouchTrigger.CFrame = lp.CFrame
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FoodCounter.Trigger, 0)
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FoodCounter.Trigger, 1)
+		task.wait(.1)
+    end
+end
+
+wait(1)
+
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FoodCounter.Trigger, 0)
+task.wait(.1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FoodCounter.Trigger, 1)
+
+wait(1)
+repeat wait(2) until workspace.GroupBuildStructures:FindFirstChild("FuseBoard")
+
+for i,v in pairs(workspace:GetChildren()) do
+    if v.Name:find("Fuse") then
+		v.TouchTrigger.CFrame = lp.CFrame
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FuseBoard.Trigger, 0)
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FuseBoard.Trigger, 1)
+		task.wait(.1)
+    end
+end
+
+wait(1)
+
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FuseBoard.Trigger, 0)
+task.wait(.1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.FuseBoard.Trigger, 1)
+
+wait(1)
+repeat wait(2) until workspace.GroupBuildStructures:FindFirstChild("BatteryBox")
+
+for i,v in pairs(workspace:GetChildren()) do
+    if v.Name:find("Battery") then
+		v.TouchTrigger.CFrame = lp.CFrame
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BatteryBox.Trigger, 0)
+        task.wait(.1)
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BatteryBox.Trigger, 1)
+		task.wait(.1)
+    end
+end
+
+wait(1)
+
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BatteryBox.Trigger, 0)
+task.wait(.1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, workspace.GroupBuildStructures.BatteryBox.Trigger, 1)
+
+wait(1)
+repeat wait(2) until workspace.GroupBuildStructures:FindFirstChild("TicketMachine")
+
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,workspace.Ticket.TouchTrigger,0)
+task.wait(.1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,workspace.Ticket.TouchTrigger,1)
+task.wait(.1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,workspace.GroupBuildStructures.TicketMachine.Trigger,0)
+task.wait(.1)
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,workspace.GroupBuildStructures.TicketMachine.Trigger,1)
+end
